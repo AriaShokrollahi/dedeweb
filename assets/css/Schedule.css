@@ -143,8 +143,20 @@
 .form-card h2 {
     font-size: 50px;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 
+}
+.form-check-input[type=checkbox] {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+.form-check-input[type=checkbox]:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .form-control {
@@ -186,9 +198,146 @@
     text-decoration: underline;
 }
 
-@media (max-width: 767px) {
-
+@media (min-width: 992px) and (max-width: 1200px) {
   .login-page {
+    padding: 0px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+.text-section {
+  height: 100%;
+    flex: 1;
+}
+.btn-backtohome {
+    position: relative;
+    bottom: 100px;
+    max-width: 230px;
+}
+.btn-backhome {
+    background-color: var(--default-color);
+    color: var(--contrast-color);
+    border-radius: 50px;
+    font-size: 16px;
+    height: 60px;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-backhome:hover{
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.btn-backhome img {
+    margin-right: 15px;
+    transform: scaleX(-1);
+    width: 20%;
+}
+.text-section h1 {
+
+  width: 100%;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.text-section .highlight {
+    color: #ff6600;
+}
+
+.from-card-text {
+  width: 100%;
+  position: relative;
+  right: -150px;
+  top: -60px;
+  color: var(--default-color);
+  font-size: 13px;
+  max-width: 20px;
+}
+
+.text-section p {
+  margin-top: 0px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: #161616;
+    max-width: 600px;
+}
+
+.form-card {
+    background-color: #D9D9D9;
+    padding: 70px;
+    border-radius: 20px;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.form-card h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  font-weight: 500;
+
+}
+.form-check-input[type=checkbox] {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+.form-check-input[type=checkbox]:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.form-control {
+    border-radius: 50px;
+    height: 60px;
+    padding: 12px 30px;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.btn-submit {
+  align-items: center;
+  text-align: center;
+    background-color: var(--default-color);
+    color: var(--contrast-color);
+    border-radius: 50px;
+    height: 60px;
+    padding: 12px 15px;
+    width: 100%;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 200;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.terms {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.terms a {
+    color: black;
+    text-decoration: underline;
+}
+}
+
+@media (max-width: 767px) {
+  .login-page {
+    padding: 0;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -216,8 +365,9 @@
     height: 800px;
   }
   .form-card h2 {
-    font-size: 35px;
-    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+    text-align: left;
   }
   .form-control {
     font-size: 20px;
@@ -228,7 +378,8 @@
     height: 60px;
   }
   .terms {
-    font-size: 12px;
+    padding: 0 30px;
+    font-size: 14px;
     text-align: center;
   }
 
@@ -237,8 +388,9 @@
   }
 
   .btn-backhome {
-    height: 60px;
-    font-size: 18px;
+    width: 150px;
+    height: 40px;
+    font-size: 12px;
   } 
 
   .btn-backhome img {
@@ -258,11 +410,23 @@
   }
   
   .footer {
-    width: 95%;
+    width: 100%;
     padding: 40px 20px;
     height: auto;
-    margin: 20px 15px;
+    margin: 20px 0px;
     border-radius: 25px;
+  }
+
+  .footer-links {
+    left: 0;
+  }
+
+  .privcy {
+    font-size: 16px;
+  }
+
+  .privcy a {
+    font-size: 16px;
   }
 
   .footer-logo img {
@@ -273,6 +437,7 @@
 
   .footer-links a {
     font-size: 16px;
+    left: 0px;
   }
 
   .subscribe-box {
@@ -301,18 +466,31 @@
 
   .back-to-top {
     bottom: 10px;
-    left: -40px;
-    width: 140px;
+    left: -50px;
+    width: 100px;
+    max-width: 180px;
     font-size: 16px;
     margin: 20px auto;
   }
   .subscribe-box button {
     padding: 0;
     position: relative;
+    border-radius: 50%;
     width: 35px;
     height: 35px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .subscribe-box{
+  .subscribe-box {
+    width: 100%;
     margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #error-message {
+    text-align: left;
   }
 }
