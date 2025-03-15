@@ -64,6 +64,7 @@
 
         <div class="form-card">
             <h2>Schedule a call</h2>
+            <p id="error-message" style="color: red; display: none; font-size: 24px; margin-top: 5px;">Please fill in all fields.</p>
             <form>
                 <div class="mb-3">
                     <input type="text" class="form-control" placeholder="Name">
@@ -74,9 +75,9 @@
                 <div class="mb-3">
                     <input type="text" class="form-control" placeholder="Company Name">
                 </div>
-                <a class="btn btn-submit" href="Discovery.html">
+                <button class="btn btn-submit" id="pickDayTimeBtn" disabled>
                     Pick a day & time
-                </a>
+                </button>
                 <div class="form-check terms">
                     <input class="form-check-input" type="checkbox" id="termsCheck">
                     <label class="form-check-label" for="termsCheck">
@@ -157,5 +158,6 @@
     
       <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/schedule.js"></script>
 </body>
 </html>

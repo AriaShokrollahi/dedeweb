@@ -24,6 +24,9 @@
         <link href="assets/css/main.css" rel="stylesheet">
         <link href="assets/css/Discovery.css" rel="stylesheet">
 
+        <!-- celander -->
+        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+
         <!-- scrollbar -->
          <style>
           ::-webkit-scrollbar {
@@ -46,23 +49,24 @@
         
     </head>
 <body>
+    
     <div class="container black-box-info">
         <div class="row session-container">
             <div class="col-md-6 text-container Calender-text">
                 <div class="btn-backtohome">
                     <a href="Schedule.html">
                         <button class="btn btn-backhome btn btn-lg d-flex align-items-center justify-content-center">
-                            <img class="arrow-img" src="assets/img/Arrow Button.svg" alt="Arrow">Schedule inforamtion
+                            <img class="arrow-img" src="assets/img/Arrow Button.svg" alt="Arrow">Schedule information
                         </button>
                     </a>
                 </div>
                 <h1 class="title-Dis">
                     <span class="highlight">Dedeweb</span> <br>
-                    Discovery <br>
+                    Discovery 
                     Session
                 </h1>
                 <div class="details">
-                    <img src="assets/img/Vector1.svg" alt="icon"> <span class="title-box"> 20 Min</span> 
+                    <img src="assets/img/Vector1.svg" alt="icon"> <span class="title-box"> 20 Min</span>
                 </div>
                 <div class="details">
                     <img src="assets/img/video.svg" alt="icon"> <span class="title-box"> Web conferencing details provided upon confirmation.</span>
@@ -73,11 +77,26 @@
                 </p>
             </div>
             <div class="col-md-6 d-flex justify-content-center">
-                <div class="black-box"></div>
+                <div class="black-box">
+                    <div id='calendar-view' class="calendar-view">
+                        <div id='calendar'></div>
+                    </div>
+                    <div id='time-slots' class="time-slots-container" style="display: none;">
+                        <div class="back-to-calendar">
+                            <button class="back-btn" onclick="showCalendar()">
+                                <img src="assets/img/Arrow Button.svg" alt="Back" class="back-arrow">
+                                Back to Calendar
+                            </button>
+                        </div>
+                        <h3 class="time-slots-title">Select a Time Slot:</h3>
+                        <div id='slots-container' class="time-grid">
+                        </div>
+                        <button id='confirm-btn' class="confirm-button">Confirm Selection</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     <!-- Footer -->
 
 <footer class="footer">
@@ -116,7 +135,7 @@
       </div>
       <div class="row">
         <div class="col-md-4">
-          <a href="#" class="back-to-top" style="width: 210px;">Back To Top <span>↑</span></a>
+          <a href="#" class="back-to-top">Back To Top <span>↑</span></a>
         </div>
   
         <div class="col-md-4">
@@ -140,11 +159,15 @@
   <!-- End Footer -->
 
 
-
+  
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     
       <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- calendar -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <script src="assets/js/celander.js"></script>
 </body>
 </html>
